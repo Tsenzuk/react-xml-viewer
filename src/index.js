@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import DeclarationElement from './declaration-el';
 import Elements from './elements';
 
-const defaultIndentSize = 2;
-const defaultTheme = {
+export const defaultIndentSize = 2;
+export const defaultTheme = {
   tagColor: '#d43900',
   textColor: '#333',
   attributeKeyColor: '#2a7ab0',
@@ -50,10 +50,11 @@ XMLViewer.propTypes = {
 
 XMLViewer.defaultProps = {
   theme: {},
-  indentSize: 2,
+  indentSize: defaultIndentSize,
   invalidXml: defaultInvalidXml,
   collapsible: false,
 }
 
 export default XMLViewer;
-
+export * as DeclarationElement from './declaration-el';
+export * as Elements from './elements';
